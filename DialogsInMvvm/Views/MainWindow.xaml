@@ -1,0 +1,40 @@
+﻿<Window
+    x:Class="DialogsInMvvm.Views.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:DialogsInMvvm"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="clr-namespace:DialogsInMvvm.ViewModels"
+    Title="MainWindow"
+    Width="450"
+    Height="450"
+    mc:Ignorable="d">
+
+    <Window.DataContext>
+        <vm:MainViewModel />
+    </Window.DataContext>
+
+    <StackPanel>
+        <Button
+            Height="50"
+            Command="{Binding ShowDialog}"
+            Content="Show Dialog" />
+        <Button
+            Height="50"
+            Command="{Binding ShowDialogParameter}"
+            Content="Show Dialog and Param" />
+        <Button
+            Height="50"
+            Command="{Binding ShowDialogParameterAnonymous}"
+            Content="Show Dialog and Param Anonymous" />
+        <Button
+            Height="50"
+            Command="{Binding ShowDialogParameterAnonymousRegister}"
+            Content="Show Dialog and Param Anonymous base on Register" />
+        <Button
+            Height="50"
+            Command="{Binding ShowDialogParameterAnonymousRegisterVMType}"
+            Content="Show Dialog and Param Anonymous base on Register binding View Model" />
+    </StackPanel>
+</Window>
